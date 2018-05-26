@@ -1,0 +1,13 @@
+<div *ngIf='location'>
+<app-navbar></app-navbar>
+</div>
+<div class="row">
+  <div class="col-sm-3" *ngIf='location'>
+    <app-sidebar></app-sidebar>
+
+  </div>
+  <div class="col-sm-9">
+    <app-container></app-container>
+
+  </div>
+</div>

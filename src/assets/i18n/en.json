@@ -1,0 +1,10 @@
+{
+    "titletable":"List Cars",
+    "marque":"Marque",
+    "kilometrage":"Kilometrage",
+    "periode":"Periode",
+    "affecteddate":"Affected Date",
+    "affectedto":"Affected To",
+    "status":"Status",
+    "action":"Action"
+}

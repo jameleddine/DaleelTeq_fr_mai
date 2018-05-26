@@ -1,0 +1,40 @@
+<h2>Edit Car</h2>
+<div class="form-group">
+  <label>Marque</label>
+  <input type="text" class="form-control" [(ngModel)]="car.marque">
+</div>
+
+<div class="form-group">
+  <label>Kilometrage</label>
+  <input type="number" class="form-control" [(ngModel)]="car.kilometrage">
+</div>
+
+<div class="form-group">
+  <label>Affected Fate</label>
+  <input type="Date" class="form-control" [(ngModel)]="car.affected_date">
+</div>
+
+<div class="form-group" *ngIf='car.status!="panne"'>
+    <label>Affected To</label>
+    <select class="form-control" [(ngModel)]="car.affected_to">
+        <option value="Sofien">Sofien</option>
+        <option value="Ghassan">Ghassan</option>
+        <option value="Jamel">Jamel</option>
+      </select>
+  </div>
+
+  <div class="form-group">
+    <label>Periode</label>
+    <input class="form-control" type="number" [(ngModel)]='car.periode'>
+  </div>
+
+<div class="form-group">
+  <label>Status</label>
+  <select class="form-control" [(ngModel)]="car.status">
+    <option value="affected">Affected</option>
+    <option value="disponible">Disponible</option>
+    <option value="panne">Panne</option>
+  </select>
+</div>
+
+<button class="btn btn-success" (click)="editCar()">Update Car</button>

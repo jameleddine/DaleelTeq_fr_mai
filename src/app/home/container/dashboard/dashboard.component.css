@@ -1,0 +1,24 @@
+mat-icon{
+    cursor: pointer;
+}
+.affected{
+    background: blue;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+ 
+}
+.panne{
+    background: red;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+ 
+}
+.disponible{
+    background: green;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+  
+}

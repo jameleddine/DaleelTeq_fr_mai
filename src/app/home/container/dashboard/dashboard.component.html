@@ -1,0 +1,33 @@
+<h2>{{'titletable'|translate}}</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <td>{{'marque'|translate}}</td>
+      <td>{{'kilometrage'|translate}}</td>
+      <td>{{'affecteddate'|translate}}</td>
+      <td>{{'periode'|translate}}</td>
+      <td>{{'affectedto'|translate}}</td>
+      <td>{{'status'|translate}}</td>
+      <td>{{'action'|translate}}</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let car of cars">
+      <td>{{car.marque}}</td>
+      <td>{{car.kilometrage}}</td>
+      <td>{{car.affected_date}}</td>
+      <td>{{car.periode}}</td>
+      <td>{{car.affected_to}}</td>
+      <td [ngClass]="{'affected':car.status=='affected','panne':car.status=='panne','disponible':car.status=='disponible'}">
+        <span >{{car.status}}</span>
+      </td>
+      <td>
+        <mat-icon [routerLink]='["detail",car._id]'>remove_red_eye</mat-icon>
+        <mat-icon (click)="deleteCarById(car._id,car.status)">delete_forever</mat-icon>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+

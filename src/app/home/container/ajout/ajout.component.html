@@ -1,0 +1,21 @@
+<h2>Add Cars</h2>
+<div class="form-group">
+  <label>Marque</label>
+  <input type="text" class="form-control" [(ngModel)]="marque">
+</div>
+
+<div class="form-group">
+  <label>Kilometrage</label>
+  <input type="number" class="form-control" [(ngModel)]="kilometrage">
+</div>
+
+<div class="form-group">
+  <label>Status</label>
+  <select class="form-control" [(ngModel)]="status">
+    <option value="affected">Affected</option>
+    <option value="disponible">Disponible</option>
+    <option value="panne">Panne</option>
+  </select>
+</div>
+
+<button class="btn btn-success" (click)="createCar()">Add Car</button>
